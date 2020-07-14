@@ -1,0 +1,529 @@
+/* Подключение локального шрифта Raleway-700 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap; /* Добавляем вручную свойство для отображения шрифта до загрузки */
+  src: local('Raleway Bold'), local('Raleway-Bold'),
+    url('../fonts/raleway-v16-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/raleway-v16-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --font-logo: 'Raleway', sans-serif;
+  --main-title-color: #212121;
+  --main-write-color: #ffffff;
+  --main-background-color: #ffffff;
+  --text-color: #757575;
+  --hover-color: #2196f3;
+  --background-color: #f5f4fa;
+}
+
+/* Цвет вторичный в футере  на иконках rgba(255, 255, 255, 0.6); */
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+
+  background-color: var(--main-background-color);
+}
+/*                                    Общие сбросы свойств */
+/* Убираем точки и отступы в списках */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* Убираем подчеркивание в ссылках */
+.link {
+  text-decoration: none;
+}
+/* Убираем наклонность текста */
+.address {
+  font-style: normal;
+}
+/* Убираем эффект 2рх  */
+img {
+  display: block;
+}
+/*                                   Наш div.container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Линия и фон для проверки */
+  /* outline: 1px solid red; */
+  /* background-color: yellowgreen; */
+}
+.section {
+  /* Фон для проверки */
+  /* background-color: teal; */
+}
+/*                                       Шапка сайта */
+
+/* "Эффект присутствия на странице */
+.nav-link.current {
+  color: var(--hover-color);
+}
+/* Accent эффект */
+.nav-link:hover,
+.nav-link:focus,
+.contakt-link:hover,
+.contakt-link:focus {
+  color: var(--hover-color);
+}
+/* Логотип */
+.logo {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-web {
+  color: #188ce8;
+}
+.black-studio {
+  color: #000000;
+}
+/* Текст */
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
+}
+
+.contakt-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  margin-left: 85px;
+}
+.contakt-list {
+  display: flex;
+}
+.nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.contakt-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/*                                         Студия */
+
+/* Hero */
+.hero {
+  text-align: center;
+  /* Зададим временный фон,чтобы было видно текст */
+  background-color: var(--text-color);
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--main-write-color);
+}
+.hero-button {
+  display: inline-block;
+  min-width: 200px;
+
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+
+  border-radius: 4px;
+  /* Убираем рамку до выяснения */
+  /* border: 1px solid transparent; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  background-color: var(--hover-color);
+  color: var(--main-write-color);
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #2196f3;
+}
+
+/* Секция О нас */
+
+.about-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.about-description {
+  margin: 0;
+
+  line-height: 1.71;
+  color: var(--text-color);
+}
+.about-icon {
+  display: inline-block;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  background-color: var(--background-color);
+}
+.about {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.about-list {
+  display: flex;
+  /*  Можно также использовать. вместо то что ниже*/
+  /* justify-content: space-between; */
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-item {
+}
+/*              Чем занимаемся секция */
+.offer {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+.offer-title {
+  margin-top: 0;
+  margin-bottom: 50;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.offer-name {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Зададим временный фон,чтобы было видно текст */
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--main-write-color);
+}
+.offer-list {
+  display: flex;
+}
+.offer-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* Секция Наша команда */
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--background-color);
+}
+.team-list {
+  display: flex;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.team-item img {
+  margin-bottom: 30px;
+}
+.team-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.team-position {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  color: var(--text-color);
+}
+.name-social-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.team-item {
+  display: block;
+  width: 270px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  background-color: var(--main-background-color);
+}
+/* Сделано временно в одной карточке для визуализации */
+.name-social-item {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  /* Временный фон */
+  background-color: var(--background-color);
+}
+/* Секция Постоянные клиенты */
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+.customers-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  background-color: var(--main-background-color);
+}
+.customers-item:hover,
+.customers-item:focus {
+  border-color: var(--hover-color);
+}
+
+/*                                Секция Портфолио */
+.main-portfolio {
+  padding-top: 93px;
+  margin-bottom: 94px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--hover-color);
+  color: var(--main-write-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+.filter-button.current {
+  background-color: var(--hover-color);
+  color: var(--main-write-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+.filter-button {
+  border-width: 0;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  margin: 0;
+  outline: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  background-color: var(--background-color);
+  color: var(--main-title-color);
+
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.filter .filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter > .list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--main-title-color);
+}
+.portfolio-web,
+.portfolio-design,
+.portfolio-app,
+.portfolio-marketing {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 24px;
+
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--text-color);
+}
+
+.portfolio > .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item img {
+  margin-bottom: 20px;
+}
+.portfolio-link {
+  display: block;
+  width: 370px;
+  border: 1px solid #eeeeee;
+}
+/* Кроме каждого третьего */
+.portfolio-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+/* Кроме трех  последних с конца */
+.portfolio-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.portfolio-about {
+  /* Временно спрячем */
+  display: none;
+
+  font-size: 18px;
+  line-height: 1.56;
+  /* Добавляем фон временно для видимости текста */
+  background: rgba(33, 150, 243, 0.9);
+  color: var(--main-write-color);
+}
+
+/*                                          Подвал сайта */
+/* Добавляем фон для видимости текста */
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.white-studio {
+  color: var(--main-write-color);
+}
+
+.address-link {
+  line-height: 1.71;
+  color: var(--main-write-color);
+}
+
+.address-mail,
+.address-tel {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-join {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  color: var(--main-write-color);
+  text-transform: uppercase;
+}
+
+.accent-link:hover,
+.accent-link:focus {
+  color: var(--hover-color);
+}
+.footer .container {
+  display: flex;
+
+  align-items: baseline;
+}
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.address .link {
+  display: inline-block;
+}
+.address .link:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-box:not(:last-child) {
+  margin-right: 69px;
+}
+.footer-social-icon {
+  display: flex;
+}

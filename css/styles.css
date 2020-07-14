@@ -281,7 +281,7 @@ img {
   line-height: 1.17;
   text-align: center;
 }
-.team-item img {
+.team-item > img {
   margin-bottom: 30px;
 }
 .team-name {
@@ -321,14 +321,18 @@ img {
 }
 /* Сделано временно в одной карточке для визуализации */
 .name-social-item {
-  display: inline-block;
+  display: flex;
+}
+.name-social-item > a {
+  display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  justify-content: center;
   border-radius: 50%;
   /* Временный фон */
   background-color: var(--background-color);
 }
+
 /* Секция Постоянные клиенты */
 .customers {
   padding-top: 94px;
@@ -346,10 +350,9 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.customers-item {
+.customers-item > a {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   width: 170px;
   height: 90px;
@@ -357,8 +360,8 @@ img {
   border-radius: 4px;
   background-color: var(--main-background-color);
 }
-.customers-item:hover,
-.customers-item:focus {
+.customers-item > a:hover,
+.customers-item > a:focus {
   border-color: var(--hover-color);
 }
 

@@ -84,6 +84,15 @@ img {
 /* "Эффект присутствия на странице */
 .nav-link.current {
   color: var(--hover-color);
+  padding-bottom: 0;
+}
+.nav-link.current::after {
+  content: '';
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--hover-color);
+  display: block;
+  margin-top: 28px;
 }
 /* Accent эффект */
 .nav-link:hover,
@@ -153,9 +162,23 @@ img {
 
 /* Hero */
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+
   text-align: center;
-  /* Зададим временный фон,чтобы было видно текст */
+  /* Зададим фон,чтобы было видно текст в случае медленной загрузки фонового изображения */
   background-color: var(--text-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url('../images/hero/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   margin-top: 0;
@@ -465,6 +488,11 @@ img {
 .portfolio-link {
   display: block;
   width: 370px;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .portfolio-card {
   padding-top: 20px;

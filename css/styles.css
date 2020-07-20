@@ -235,17 +235,36 @@ img {
   line-height: 1.71;
   color: var(--text-color);
 }
-.about-icon {
-  display: inline-block;
+.about-item::before {
+  content: '';
+  width: 270px;
+  height: 120px;
+  display: inline-flex;
   margin-bottom: 30px;
+
+  padding-right: 100px;
+  background-color: var(--background-color);
   border-radius: 4px;
 
-  padding-top: 25px;
-  padding-right: 100px;
-  padding-bottom: 25px;
-  padding-left: 100px;
-  background-color: var(--background-color);
+  background-repeat: no-repeat;
+  background-position: center;
 }
+.about-item.icon-attention::before {
+  background-image: url(../images/about-icon/antenna-1.svg);
+}
+.about-item.icon-time.about-item::before {
+  background-image: url(../images/about-icon/clock-2.svg);
+}
+.about-item.icon-planning::before {
+  background-image: url(../images/about-icon/diagram-3.svg);
+}
+.about-item.icon-innovation::before {
+  background-image: url(../images/about-icon/astronaut-4.svg);
+}
+/* Также можно сделать и через СSS */
+/* .about-item:nth-child(4)::before {
+  background-image: url(../images/about-icon/astronaut-4.svg);
+} */
 .about {
   padding-top: 94px;
   padding-bottom: 47px;

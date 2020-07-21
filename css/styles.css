@@ -376,10 +376,7 @@ img {
   padding-left: 32px;
   padding-right: 32px;
 }
-/* Сделано временно в одной карточке для визуализации */
-.name-social-item {
-  display: flex;
-}
+
 .name-social-item > a {
   display: flex;
   width: 44px;
@@ -387,8 +384,16 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  /* Временный фон */
-  background-color: var(--background-color);
+  fill: #afb1b8;
+}
+.name-social-item .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.name-social-item > a:hover {
+  background-color: var(--hover-color);
+  fill: var(--main-write-color);
 }
 
 /* Секция Постоянные клиенты */

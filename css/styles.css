@@ -385,6 +385,7 @@ img {
   width: 44px;
   height: 44px;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   /* Временный фон */
   background-color: var(--background-color);
@@ -410,6 +411,7 @@ img {
 .customers-item > a {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   width: 170px;
   height: 90px;

@@ -157,7 +157,25 @@ img {
 .header {
   border-bottom: 1px solid #ececec;
 }
+.contakt-link::before {
+  content: '';
+  height: 16px;
+  width: 16px;
 
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-right: 10px;
+}
+
+.icon-email::before {
+  background-image: url(../images/contacts-icon/email.svg);
+}
+.icon-smartphone::before {
+  background-image: url(../images/contacts-icon/smartphone.svg);
+}
 /*                                         Студия */
 
 /* Hero */

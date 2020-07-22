@@ -19,6 +19,7 @@
   --text-color: #757575;
   --hover-color: #2196f3;
   --background-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 
 /* Цвет вторичный в футере  на иконках rgba(255, 255, 255, 0.6); */
@@ -75,11 +76,7 @@ img {
   /* outline: 1px solid red; */
   /* background-color: yellowgreen; */
 }
-.section {
-  /* Фон для проверки */
-  /* background-color: teal; */
-}
-/*                                       Шапка сайта */
+/*                                        Шапка сайта  */
 
 /* "Эффект присутствия на странице */
 .nav-link.current {
@@ -432,6 +429,38 @@ img {
 .customers-item > a:hover,
 .customers-item > a:focus {
   border-color: var(--hover-color);
+}
+.customers-icon {
+  fill: var(--icon-color);
+}
+.icon-logo-1 {
+  width: 44px;
+  height: 49px;
+}
+.icon-logo-2 {
+  width: 40px;
+  height: 52px;
+}
+.icon-logo-3 {
+  width: 41px;
+  height: 43px;
+}
+.icon-logo-4 {
+  width: 80px;
+  height: 42px;
+}
+.icon-logo-5 {
+  width: 59px;
+  height: 47px;
+}
+.icon-logo-6 {
+  width: 88px;
+  height: 46px;
+}
+
+.customers-item > a:hover .customers-icon,
+.customers-item > a:focus .customers-icon {
+  fill: var(--hover-color);
 }
 
 /*                                Секция Портфолио */

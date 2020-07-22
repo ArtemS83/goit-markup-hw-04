@@ -239,7 +239,21 @@ img {
 }
 
 /* Секция О нас */
-
+.about {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.about-list {
+  display: flex;
+  /*  Можно также использовать. вместо то что ниже*/
+  /* justify-content: space-between; */
+}
+.about-item {
+  width: 270px;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
 .about-name {
   margin-top: 0;
   margin-bottom: 10px;
@@ -253,49 +267,22 @@ img {
   line-height: 1.71;
   color: var(--text-color);
 }
-.about-item::before {
-  content: '';
-  width: 270px;
-  height: 120px;
-  display: inline-flex;
-  margin-bottom: 30px;
 
+.about-bg {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 30px;
   background-color: var(--background-color);
   border-radius: 4px;
+}
+.about-icon {
+  width: 70px;
+  height: 70px;
+}
 
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.about-item.icon-attention::before {
-  background-image: url(../images/about-icon/antenna-1.svg);
-}
-.about-item.icon-time.about-item::before {
-  background-image: url(../images/about-icon/clock-2.svg);
-}
-.about-item.icon-planning::before {
-  background-image: url(../images/about-icon/diagram-3.svg);
-}
-.about-item.icon-innovation::before {
-  background-image: url(../images/about-icon/astronaut-4.svg);
-}
-/* Также можно сделать и через СSS */
-/* .about-item:nth-child(4)::before {
-  background-image: url(../images/about-icon/astronaut-4.svg);
-} */
-.about {
-  padding-top: 94px;
-  padding-bottom: 47px;
-}
-.about-list {
-  display: flex;
-  /*  Можно также использовать. вместо то что ниже*/
-  /* justify-content: space-between; */
-}
-.about-item:not(:last-child) {
-  margin-right: 30px;
-}
-.about-item {
-}
 /*              Чем занимаемся секция */
 .offer {
   padding-top: 47px;

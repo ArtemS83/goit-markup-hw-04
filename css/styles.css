@@ -169,7 +169,7 @@ img {
 .icon-phone {
   align-self: center;
   margin-right: 10px;
-  fill: var(--icon-color);
+  fill: var(--text-color);
 }
 .contakt-link:hover .icon-mail,
 .contakt-link:focus .icon-mail,
@@ -394,18 +394,19 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  fill: #afb1b8;
 }
 .name-social-item .icon {
   width: 20px;
   height: 20px;
+  fill: var(--icon-color);
 }
 
 .name-social-item > a:hover {
   background-color: var(--hover-color);
+}
+.name-social-item > a:hover .icon {
   fill: var(--main-write-color);
 }
-
 /* Секция Постоянные клиенты */
 .customers {
   padding-top: 94px;

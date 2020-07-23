@@ -22,8 +22,6 @@
   --icon-color: #afb1b8;
 }
 
-/* Цвет вторичный в футере  на иконках rgba(255, 255, 255, 0.6); */
-
 body {
   font-family: var(--main-font);
   font-size: 14px;
@@ -592,7 +590,7 @@ img {
 }
 
 /*                                          Подвал сайта */
-/* Добавляем фон для видимости текста */
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -644,6 +642,27 @@ img {
 .footer-box:not(:last-child) {
   margin-right: 69px;
 }
-.footer-social-icon {
+.footer-social-list {
   display: flex;
+}
+.footer-social-item > a {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-write-color);
+}
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-item > a:hover {
+  background-color: var(--hover-color);
 }

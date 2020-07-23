@@ -144,35 +144,43 @@ img {
 }
 .contakt-list {
   display: flex;
+  align-items: center;
 }
+.contakt-list .link {
+  display: flex;
+}
+
 .nav-list .item:not(:last-child) {
   margin-right: 50px;
 }
 .contakt-list .item:not(:last-child) {
   margin-right: 30px;
 }
+.icon-mail {
+  width: 16px;
+  height: 11px;
+  margin-top: 1px;
+}
+.icon-phone {
+  width: 10px;
+  height: 15px;
+}
+.icon-mail,
+.icon-phone {
+  align-self: center;
+  margin-right: 10px;
+  fill: var(--icon-color);
+}
+.contakt-link:hover .icon-mail,
+.contakt-link:focus .icon-mail,
+.contakt-link:hover .icon-phone,
+.contakt-link:focus .icon-phone {
+  fill: var(--hover-color);
+}
 .header {
   border-bottom: 1px solid #ececec;
 }
-.contakt-link::before {
-  content: '';
-  height: 16px;
-  width: 16px;
 
-  display: inline-flex;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  margin-right: 10px;
-}
-
-.icon-email::before {
-  background-image: url(../images/contacts-icon/email.svg);
-}
-.icon-smartphone::before {
-  background-image: url(../images/contacts-icon/smartphone.svg);
-}
 /*                                         Студия */
 
 /* Hero */
@@ -626,10 +634,10 @@ img {
   display: inline-block;
   margin-bottom: 20px;
 }
-.address .link {
+.footer-address .link {
   display: inline-block;
 }
-.address .link:not(:last-child) {
+.footer-address .link:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer-box:not(:last-child) {
